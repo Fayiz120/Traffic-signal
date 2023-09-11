@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+
+
+
+
+
+
+<style>
+  .traffic-light {
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+    border: 2px solid rgb(0, 0, 0); 
+    border-radius: 10px; 
+    width: 12%;
+    background-color: rgb(65, 64, 64);
+    justify-content: center;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  margin-left: 40%;
+  margin-right: 30%;
+  box-shadow:10px;
+  background-color: rgb(0, 0, 0);
+
+
+  }
+  .light {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(241, 237, 237);
+    border: 2px solid black;
+    border-radius: 50%;
+    margin-left: 20px ;
+    padding: 5px;
+ 
+    
+
+
+  }
+  .red { background-color: red; }
+  .yellow { background-color: yellow; }
+  .green { background-color: green; }
+</style>
+</head>
+
+
+
+
+
+
+
+
+<body>
+
+<div class="traffic-light">
+  <div id="red" class="light red" ></div>
+  <div id="yellow" class="light yellow"></div>
+  <div id="green" class="light green"></div>
+</div>
+
+<script>
+function changeTrafficLight() {
+  const redLight = document.getElementById('red');
+  const yellowLight = document.getElementById('yellow');
+  const greenLight = document.getElementById('green');
+
+
+
+
+
+
+  setTimeout(() => {
+    redLight.classList.add('red');
+    yellowLight.style.opacity = 0.3;
+    redLight.style.opacity = 1;
+    greenLight.style.opacity = 0.3;
+  }, 0);
+
+
+
+  setTimeout(() => {
+    yellowLight.classList.add('yellow');
+    yellowLight.style.opacity = 1;
+    redLight.style.opacity = 0.3;
+    greenLight.style.opacity = 0.3;
+  }, 2000);
+
+
+
+
+
+
+
+  setTimeout(() => {
+    greenLight.classList.add('green');
+    yellowLight.style.opacity = 0.3;
+    redLight.style.opacity = 0.3;
+    greenLight.style.opacity = 1;
+  }, 3000);
+
+
+
+
+  setTimeout(() => {
+    //redLight.classList.remove('red');
+    //yellowLight.classList.add('yellow');
+    //greenLight.classList.remove('green');
+    changeTrafficLight();
+  }, 5000);
+}
+
+
+changeTrafficLight();
+
+
+
+
+
+
+</script>
+
+
+
+
+</body>
+</html>

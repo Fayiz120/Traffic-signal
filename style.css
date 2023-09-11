@@ -1,0 +1,39 @@
+.img{
+    height: 281px;
+    width:196px;
+}
+.container{
+    position: relative;
+}
+.green{
+position: absolute;
+background-color: green;
+height: 45px;
+width: 45px;
+border-radius: 50%;
+top: 23px;
+left: 76px;
+}
+.yellow{
+position: absolute;
+background-color: yellow;
+height: 45px;
+width: 45px;
+border-radius: 50%;
+top: 90px;
+left: 76px;
+}
+.red{
+position: absolute;
+background-color: red;
+height: 45px;
+width: 45px;
+border-radius: 50%;
+top: 160px;
+left: 76px;
+}
+.aa{
+    position: absolute;
+    left:0px;
+    z-index: -2;
+}
